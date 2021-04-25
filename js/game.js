@@ -1,33 +1,33 @@
-var step = document.getElementsByClassName('astep');
-var rdice = document.getElementsByClassName('r-dice');
-var gdice = document.getElementsByClassName('g-dice');
-var bdice = document.getElementsByClassName('b-dice');
-var ydice = document.getElementsByClassName('y-dice');
+let step = document.getElementsByClassName('astep');
+let rdice = document.getElementsByClassName('r-dice');
+let gdice = document.getElementsByClassName('g-dice');
+let bdice = document.getElementsByClassName('b-dice');
+let ydice = document.getElementsByClassName('y-dice');
 
-var dicesound = document.getElementById("diceSound");
-var killedsound = document.getElementById("killedSound");
-var winsound = document.getElementById("winSound");
-var inoutsound = document.getElementById("inoutSound");
-var stepsound = document.getElementById("stepSound");
+let dicesound = document.getElementById("diceSound");
+let killedsound = document.getElementById("killedSound");
+let winsound = document.getElementById("winSound");
+let inoutsound = document.getElementById("inoutSound");
+let stepsound = document.getElementById("stepSound");
 
-var r = document.getElementsByClassName('r');
-var g = document.getElementsByClassName('g');
-var b = document.getElementsByClassName('b');
-var y = document.getElementsByClassName('y');
+let r = document.getElementsByClassName('r');
+let g = document.getElementsByClassName('g');
+let b = document.getElementsByClassName('b');
+let y = document.getElementsByClassName('y');
 
-var ri = document.getElementsByClassName('ri')[0];
-var gi = document.getElementsByClassName('gi')[0];
-var yi = document.getElementsByClassName('yi')[0];
-var bi = document.getElementsByClassName('bi')[0];
+let ri = document.getElementsByClassName('ri')[0];
+let gi = document.getElementsByClassName('gi')[0];
+let yi = document.getElementsByClassName('yi')[0];
+let bi = document.getElementsByClassName('bi')[0];
 
-var play = document.getElementsByClassName('play')[0];
+let play = document.getElementsByClassName('play')[0];
 
-var playerzone = document.getElementsByClassName('player');
-var playerroom = document.getElementsByClassName('playerzone');
-var playername = document.getElementsByClassName('playername');
-var mplayername = document.getElementsByClassName('mplayername');
-var welcomescreen = document.getElementsByClassName('welcome')[0];
-var pp = [];
+let playerzone = document.getElementsByClassName('player');
+let playerroom = document.getElementsByClassName('playerzone');
+let playername = document.getElementsByClassName('playername');
+let mplayername = document.getElementsByClassName('mplayername');
+let welcomescreen = document.getElementsByClassName('welcome')[0];
+let pp = [];
 
 play.addEventListener("click", function () {
     if (gi.value === "") {
@@ -62,9 +62,6 @@ play.addEventListener("click", function () {
         mplayername[0].innerHTML = ri.value;
         pp.push('r');
     }
-
-
-
 
     if (yi.value === "") {
         var i;
@@ -119,7 +116,6 @@ play.addEventListener("click", function () {
     } else {
         welcomescreen.remove();
     }
-
 });
 
 gdice[0].style.display = "none";
@@ -252,7 +248,7 @@ function motionOn(pno) {
 
             y[i].classList.add("animate__animated", "animate__tada");
             r[i].classList.remove("animate__animated", "animate__tada");
-            
+
             g[i].classList.remove("animate__animated", "animate__tada");
             b[i].classList.remove("animate__animated", "animate__tada");
 
@@ -269,7 +265,7 @@ function motionOn(pno) {
             r[i].classList.remove("animate__animated", "animate__tada");
             y[i].classList.remove("animate__animated", "animate__tada");
             g[i].classList.remove("animate__animated", "animate__tada");
-            
+
             r[i].style.zIndex = "0";
             g[i].style.zIndex = "0";
             b[i].style.zIndex = "+99";
